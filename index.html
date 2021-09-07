@@ -1,0 +1,283 @@
+<!doctype html>
+<html class="h-100" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>81. Bootstrap Telegram</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="telegram-chat h-100 d-flex flex-column">
+
+  <main class="flex-grow-1">
+    <h1 class="sr-only">Telegram's Bootstrap Clone</h1>
+    <div class="row no-gutters">
+      <!-- CHATS -->
+      <section class="chats col-md-5 col-lg-4">
+        <h2 class="sr-only">Chats</h2>
+
+        <div class="vh-100 d-flex flex-column overflow-hidden bg-light">
+          <!-- CHATS-TOP -->
+          <header class="d-flex p-2">
+            <!-- CHATS-MENU-TOGGLER -->
+            <button class="chats__menu-toggler btn btn-sm" type="button" aria-label="Toggle menu" data-toggle="modal" data-target="#sidebar-modal">
+              <svg class="chats__menu-toggler-icon d-block" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#000000">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+              </svg>
+            </button>
+
+            <!-- CHATS-SEARCH-FORM -->
+            <form class="flex-grow-1 d-flex flex-column mx-2" action="https://echo.htmlacademy.ru" method="GET">
+              <input class="flex-grow-1 form-control form-control-sm" type="search" name="search" aria-label="Search" placeholder="Search" autofocus required>
+            </form>
+
+            <!-- CHATS-LOCK-BUTTON -->
+            <button class="chats__lock-button btn btn-sm" type="button" aria-label="Lock" data-toggle="modal" data-target="#lock-modal">
+              <svg class="chats__lock-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#000000">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z" />
+              </svg>
+            </button>
+          </header>
+
+          <!-- CHATS-LIST -->
+          <div class="chats__list list-group list-group-flush">
+            <!-- CHATS-ITEM -->
+            <a class="chats__item list-group-item list-group-item-action d-flex align-items-center p-3 overflow-hidden" href="#chat-mayoq" data-toggle="tab">
+              <img class="flex-shrink-0 mr-3 rounded-circle img-fluid" src="https://picsum.photos/id/870/60" alt="Mayoq" width="60" height="60">
+              <!-- CHATS-ITEM-INFO -->
+              <div class="flex-grow-1 overflow-hidden">
+                <!-- CHATS-ITEM-TOP -->
+                <div class="d-flex align-items-center mb-2 overflow-hidden">
+                  <!-- CHAT-HEADING -->
+                  <h3 class="flex-grow-1 d-flex align-items-center h6 mb-0 overflow-hidden">
+                    <svg class="flex-shrink-0 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M18 11v2h4v-2h-4zm-2 6.61c.96.71 2.21 1.65 3.2 2.39.4-.53.8-1.07 1.2-1.6-.99-.74-2.24-1.68-3.2-2.4-.4.54-.8 1.08-1.2 1.61zM20.4 5.6c-.4-.53-.8-1.07-1.2-1.6-.99.74-2.24 1.68-3.2 2.4.4.53.8 1.07 1.2 1.6.96-.72 2.21-1.65 3.2-2.4zM4 9c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h1v4h2v-4h1l5 3V6L8 9H4zm11.5 3c0-1.33-.58-2.53-1.5-3.35v6.69c.92-.81 1.5-2.01 1.5-3.34z"/></svg>
+                    <span class="text-truncate">Mayoq Lorem ipsum dolor sit amet consectetur.</span>
+                  </h3>
+                  <!-- CHAT-STATE -->
+                  <svg class="flex-shrink-0 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20" fill="green"><path d="M0 0h24v24H0z" fill="none"/><path d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7zm4.24-1.41L11.66 16.17 7.48 12l-1.41 1.41L11.66 19l12-12-1.42-1.41zM.41 13.41L6 19l1.41-1.41L1.83 12 .41 13.41z"/></svg>
+                  <!-- CHAT-TIME -->
+                  <time class="small text-nowrap" datetime="2021-08-24T16:43:00">4:13 PM</time>
+                </div>
+                <!-- CHATS-ITEM-BOTTOM -->
+                <div class="d-flex align-items-center overflow-hidden">
+                  <span class="chats__item-demo d-flex flex-grow-1 overflow-hidden">
+                    <span class="text-primary">Falonchi:</span>
+                    <span class="ml-1 text-truncate">Lorem ipsum dolor sit amet.</span>
+                  </span>
+                  <span class="ml-2 badge badge-pill badge-primary">9</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- MESSAGES -->
+      <div class="d-none d-md-block col-md-7 col-lg-5">
+        <div class="tab-content">
+          <!-- MAYOQ -->
+          <div class="tab-pane fade show active" id="chat-mayoq">
+            <div class="chat d-flex flex-column vh-100">
+              <!-- CHAT-HEADER -->
+              <header class="d-flex align-items-center p-2">
+                <div class="chat__header-info position-relative flex-grow-1 mr-2">
+                  <h3 class="h6 mb-1">Mayoq</h3>
+                  <div class="d-flex">
+                    <div class="small text-secondary">4,660 subscribers</div>
+                    <button class="chat__header-info-button stretched-link" type="button" data-toggle="modal" data-target="#test"></button>
+                  </div>
+                </div>
+
+                <button class="btn btn-sm mr-2" type="button" aria-label="Search">
+                  <img src="img/icon-search.svg" alt="" width="24" height="24">
+                </button>
+
+                <div class="dropdown">
+                  <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-label="Dropdown">
+                    <img src="img/icon-more-vertical.svg" alt="" width="24" height="24">
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#">View channel info</a>
+                    <a class="dropdown-item" href="#">Disable notification</a>
+                    <a class="dropdown-item" href="#">View discussion</a>
+                    <a class="dropdown-item" href="#">Manage channel</a>
+                    <a class="dropdown-item" href="#">Add users</a>
+                    <a class="dropdown-item" href="#">Create poll</a>
+                    <a class="dropdown-item" href="#">Export channel history</a>
+                    <a class="dropdown-item" href="#">Leave channel</a>
+                    <a class="dropdown-item" href="#">Clear history</a>
+                  </div>
+                </div>
+              </header>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- REACTIONS -->
+      <div class="d-none d-lg-block col-lg-3"></div>
+    </div>
+  </main>
+
+
+  <!-- MODALS -->
+  <!-- SIDEBAR-MODAL -->
+  <section class="sidebar-modal modal fade" id="sidebar-modal">
+    <div class="sidebar-modal__modal-dialog modal-dialog p-0">
+      <div class="sidebar-modal__modal-content modal-content vh-100 d-flex flex-column border-0 rounded-0">
+        <!-- SIDEBAR-MODAL-HEADER -->
+        <header class="sidebar-modal__header bg-dark">
+          <!-- SIDEBAR-MODAL-HEADER-TOP -->
+          <div class="d-flex justify-content-between align-items-start p-4">
+            <button class="btn p-0 rounded-circle js-sidebar-modal-profiles-toggler" type="button" data-toggle="collapse" data-target="#accounts-collapse">
+              <img class="d-block img-fluid rounded-circle" src="https://picsum.photos/50" alt="rasm" width="50" height="50">
+            </button>
+
+            <a class="btn btn-info btn-sm p-2 rounded-circle" href="#saved-messages" data-toggle="tab" aria-label="Go to saved messages">
+              <svg class="d-block img-fluid" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#FFFFFF">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- SIDEBAR-MODAL-PROFILE-INFO-TOGGLER -->
+          <div class="position-relative d-flex justify-content-between align-items-center px-4 py-2 text-white">
+            <div class="flex-grow-1 overflow-hidden">
+              <div class="h6 mb-1 text-truncate">Muhammadjavohir Sur'atov</div>
+              <div class="small text-truncate">+998 90 921 37 11</div>
+            </div>
+
+            <button class="btn btn-sm stretched-link js-sidebar-modal-profiles-toggler" type="button" data-toggle="collapse" data-target="#accounts-collapse" aria-label="Toggle profiles menu">
+              <svg class="sidebar-modal__expand-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#FFFFFF">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+              </svg>
+            </button>
+          </div>
+        </header>
+
+        <!-- SIDEBAR-MODAL-CONTENT -->
+        <div class="sidebar-modal__content flex-grow-1 overflow-auto d-flex flex-column">
+          <div class="collapse" id="accounts-collapse">
+            <div class="actions-list list-group list-group-flush py-2 border-bottom">
+              <button class="actions-list__item list-group-item list-group-item-action border-0" type="button" data-toggle="modal"
+                data-target="#new-group-modal">
+                <span class="actions-list__item-inner d-flex align-items-center">
+                  <svg class="mr-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                    fill="#000000">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                  </svg>
+                  <span class="actions-list__label text-capitalize">Add profile</span>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- SIDEBAR-MODAL-LIST -->
+          <div class="actions-list list-group list-group-flush py-2">
+            <button class="actions-list__item list-group-item list-group-item-action border-0" type="button" data-toggle="modal" data-target="#new-group-modal">
+              <span class="actions-list__item-inner d-flex align-items-center">
+                <svg class="mr-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24"
+                  viewBox="0 0 24 24" width="24" fill="#000000">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                </svg>
+                <span class="actions-list__label text-capitalize">New Group</span>
+              </span>
+            </button>
+            <button class="actions-list__item list-group-item list-group-item-action border-0" type="button" data-toggle="modal" data-target="#new-group-modal">
+              <span class="actions-list__item-inner d-flex align-items-center">
+                <svg class="mr-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#000000">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M18 11v2h4v-2h-4zm-2 6.61c.96.71 2.21 1.65 3.2 2.39.4-.53.8-1.07 1.2-1.6-.99-.74-2.24-1.68-3.2-2.4-.4.54-.8 1.08-1.2 1.61zM20.4 5.6c-.4-.53-.8-1.07-1.2-1.6-.99.74-2.24 1.68-3.2 2.4.4.53.8 1.07 1.2 1.6.96-.72 2.21-1.65 3.2-2.4zM4 9c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h1v4h2v-4h1l5 3V6L8 9H4zm11.5 3c0-1.33-.58-2.53-1.5-3.35v6.69c.92-.81 1.5-2.01 1.5-3.34z" />
+                </svg>
+                <span class="actions-list__label text-capitalize">New Channel</span>
+              </span>
+            </button>
+            <div class="actions-list__item list-group-item list-group-item-action border-0">
+              <span class="actions-list__item-inner d-flex align-items-center">
+                <svg class="mr-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"
+                  fill="#000000">
+                  <rect fill="none" height="24" width="24" />
+                  <path
+                    d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z" />
+                </svg>
+                <span class="actions-list__label text-capitalize flex-grow-1 d-flex align-items-center justify-content-between">
+                  Dark mode
+                  <span class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="dark-mode-switch" name="dark_mode">
+                    <label class="custom-control-label" for="dark-mode-switch"></label>
+                  </span>
+                </span>
+                <label class="stretched-link" for="dark-mode-switch"></label>
+              </span>
+            </div>
+          </div>
+
+
+          <!-- SIDEBAR-MODAL-FOOTER -->
+          <footer class="sidebar-modal__footer p-4 mt-auto">
+            <div>
+              <a class="font-weight-bold text-secondary" href="#" target="_blank">Telegram Desktop</a>
+            </div>
+            <div>
+              <a class="text-secondary" href="#" target="_blank">Version 2.9.2</a> - <a class="text-secondary" href="#" target="_blank">About</a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- LOCK-MODAL -->
+  <section class="lock-modal modal fade" id="lock-modal">
+    <div class="lock-modal__modal-dialog modal-dialog">
+      <div class="modal-content border-0 rounded-0">
+        <div class="modal-body p-0">
+          <div class="row vh-100 p-4 justify-content-center align-items-center">
+            <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+              <h2 class="mb-3 h5 font-weight-normal text-center">Enter your local passcode</h2>
+
+              <form class="js-lock-modal-form" action="https://echo.htmlacademy.ru" method="POST">
+                <div class="form-group mb-4">
+                  <label for="lock-password-input">Your passcode</label>
+                  <input class="lock-modal__password-input form-control form-control-lg rounded-0 js-lock-modal-password-input" type="password" id="lock-password-input" name="password" placeholder="Enter your password" required>
+                  <small class="d-none form-text text-danger js-lock-modal-incorrect-password-notice">Incorrect password</small>
+                </div>
+
+                <button class="mb-2 btn btn-primary btn-block btn-lg text-uppercase" type="submit">Submit</button>
+
+                <div class="text-center">
+                  <a href="#">Log out</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="test">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        test
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
