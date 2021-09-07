@@ -18,7 +18,7 @@ var addContact = function () {
     contacts.push({
       name: elNewContactNameInput.value.trim(),
       relationship: elNewContactRelationshipInput.value.trim(),
-      phone: elNewContactPhoneInput.value.trim()
+      phone: elNewContactPhoneInput.value.trim(),
     });
 }
 
@@ -28,6 +28,7 @@ var resetInputs = function () {
     elNewContactNameInput.value = '';
     elNewContactRelationshipInput.value = '';
     elNewContactPhoneInput.value = '';
+
 }
 
 var showContacts = function () {
@@ -53,6 +54,15 @@ var showContacts = function () {
       elNewPhoneLink.href = contact.phone;
       elNewPhoneLink.textContent = contact.phone;
       elNewLi.appendChild(elNewPhoneLink);
+
+      var elNewPhoneRemove = document.createElement("span");
+      elNewPhoneRemove.classList.add("ms-2","text-danger","remove-phone");
+      elNewPhoneRemove.style.cursor = "pointer";
+      elNewPhoneRemove.textContent = "remove";
+      elNewLi.appendChild(elNewPhoneRemove);
+
+      elNewLi.setAttribute("data-id", contact.phone);
+
 
       elContactsFragment.appendChild(elNewLi);
     }
@@ -92,13 +102,52 @@ if (elNewContactForm) {
 
   });
 }
-// Form submitda amal bajariladi
 
 
-var ElformInput = document.querySelector('form-control');
+//FILM
 
-elNewContactForm.addEventListener('click', function(e) {
+// DOM
+var elFilmTemplate = document.querySelector('.film').content;
+// var elFilmCard = document.querySelector(".film-self");
+// var elFilmName = document.querySelector('.film-name');
+// var elFilmYear = document.querySelector('.film-year');
+// var elFilmGenre = document.querySelector('.film-genre');
+// var elFilmActor = document.querySelector('.film-actor');
+
+
+var films = kinolar.slice(0,50);
+var elFilms = document.querySelector(".movies");
+var elFilmsFragment = document.createDocumentFragment();
+for (const film of films) {
+  var elNewFilmItem = elFilmTemplate.cloneNode(true);
+
+  elNewFilmItem.querySelector('.film-name').textContent = film.title;
+  elNewFilmItem.querySelector('.film-year').textContent = film.year;
+  elNewFilmItem.querySelector('.film-genre').textContent = film.genres.join(", ");
+  elNewFilmItem.querySelector('.film-actor').textContent = film.cast.join(", ");
+
+  elFilmsFragment.appendChild(elNewFilmItem);
+}
+
+elFilms.appendChild(elFilmsFragment)
+
+
+elContactsList.addEventListener("click", function (e) {
+
   e.preventDefault();
+  if (e.target.matches(".remove-phone")) {
 
 
+    var findDel = contacts.findIndex(function (contact) {
+      return e.target.closest("li").dataset.id == contact.phone;
+    })
+
+    if (findDel > -1){
+      contacts.splice(findDel, 1);
+    }
+
+
+    showContacts();
+  }
+  console.log(e.target);
 })
